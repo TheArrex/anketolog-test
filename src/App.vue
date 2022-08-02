@@ -1,22 +1,19 @@
 <template>
-  <header>
-    <div class="wrapper">
-
-    </div>
-  </header>
-
   <main>
-    <IconFile/>
-    <IconFolder/>
-    <IconPencil/>
-    <IconTrash/>
+    <item v-for="item in tree" :item="item"/>
   </main>
 </template>
 
-<script setup>
-import IconFile from './components/icons/IconFile.vue'
-import IconFolder from './components/icons/IconFolder.vue'
-import IconPencil from './components/icons/IconPencil.vue'
-import IconTrash from './components/icons/IconTrash.vue'
+<script>
+import Item from './components/Item.vue'
+import { store } from './store'
 
+export default {
+  components: { Item, store },
+  computed: {
+    tree() {
+      return store.state.tree
+    }
+  }
+}
 </script>

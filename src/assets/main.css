@@ -7,3 +7,33 @@
 
   font-weight: normal;
 }
+
+main {
+  width: 300px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 25px;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 150px;
+}
+
+span, input {
+  margin-left: 5px;
+}
